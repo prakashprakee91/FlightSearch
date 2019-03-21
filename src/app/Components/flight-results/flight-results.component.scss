@@ -1,0 +1,14 @@
+.searchResultContainer, .searchResultContainer > div {
+    height: 100%;
+}
+
+.searchResultHeader {
+    height: 40px;
+    border-bottom: 1px solid;
+    line-height: 40px;
+}
+
+.searchResultBody {
+    height: calc(100% - 40px);
+    overflow: auto;
+}

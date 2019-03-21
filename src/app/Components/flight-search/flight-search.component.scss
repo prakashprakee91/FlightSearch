@@ -1,0 +1,105 @@
+
+.onewaytripBtn {
+    grid-area: onewaytripBtn;
+    color: black;
+    cursor: pointer;
+    margin: 5px 20px;
+    padding: 5px 10px;
+    border: 1px solid #bb8700;
+    text-align: center;
+    &.activeBtn {
+        background-color: #bb8700;
+        color: white;
+    }
+    
+}
+.twowaytripBtn {
+    grid-area: twowaytripBtn;
+    color: black;
+    cursor: pointer;
+    margin: 5px 20px;
+    padding: 5px 10px;
+    border: 1px solid #bb8700;
+    text-align: center;
+    &.activeBtn {
+        background-color: #bb8700;
+        color: white;
+    }
+}
+.DepartDateInput {
+    grid-area: DepartDateInput;
+    margin: 5px 20px;
+    padding: 5px 10px;
+}
+.ReturnDateInput {
+    grid-area: ReturnDateInput;
+    margin: 5px 20px;
+    padding: 5px 10px;
+}
+.PassengersInput {
+    grid-area: PassengersInput;
+    margin: 5px 20px;
+    padding: 5px 10px;
+}
+.sourceInputDiv {
+    grid-area: sourceInput;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px;
+    
+    & input {
+        padding: 5px 10px;
+    }
+    & input + div {
+        display: none;
+    }
+
+    & input:focus + div {
+        display: block;
+        background-color: white;
+        color: black;
+    }
+}
+
+.destinationInputDiv {
+    grid-area: destinationInput;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px;
+    & input {
+        padding: 5px 10px;
+    }
+     
+    & input + div {
+        display: none;
+    }
+
+    & input:focus + div {
+        margin-top: 2px;
+        display: block;
+        background-color: white;
+    }
+}
+
+.itemInSearchDropdown {
+    padding: 2px 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: whitesmoke;
+    }
+}
+
+.searchFlightBtn {
+    grid-area: searchFlightBtn;
+    color: black;
+    cursor: pointer;
+    margin: 5px 20px;
+    padding: 5px 10px;
+    border: 1px solid #bb8700;
+    text-align: center;
+    background-color: #bb8700;
+    color: white;
+    width: 100px;
+    margin: 25px auto;
+}

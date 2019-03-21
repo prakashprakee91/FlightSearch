@@ -1,0 +1,4 @@
+<div class="searchResultItem" *ngFor="let flight of flightArr">
+    <app-flight-data [oFlight]="flight"></app-flight-data>
+    <div class="flBookTicketBtn" (click)="FnBookTicketClick(flight)">Fly for Rs {{flight.Price}}</div>
+  </div>

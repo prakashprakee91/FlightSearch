@@ -1,0 +1,29 @@
+:host {
+    display: grid;
+    // grid-template-areas: 'flName flNum depTime srCode dtCode arrTime';
+    grid-template-areas: 'flName depTime arrTime'
+                         'flNum srCode dtCode';
+    margin: 10px 0px;
+}
+
+.flName {
+    grid-area: flName;
+}
+
+.flNum {
+    grid-area: flNum;
+}
+
+.flSrCode {
+    grid-area: srCode;
+}
+.flDtCode {
+    grid-area: dtCode;
+}
+.flDepTime {
+    grid-area: depTime;
+}
+.flArrTime {
+    grid-area: arrTime;
+}
+

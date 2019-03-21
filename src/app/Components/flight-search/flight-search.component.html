@@ -1,0 +1,26 @@
+<div class="onewaytripBtn" [class.activeBtn]="!bTwoWayTrip" (click)="bTwoWayTrip = false">One way</div>
+<div class="twowaytripBtn" [class.activeBtn]="bTwoWayTrip" (click)="bTwoWayTrip = true">Two way</div>
+<div class="sourceInputDiv">
+    <input type="text" placeholder="Enter Source" [(ngModel)]="sSource" (ngModelChange)="fnSearchSource()">
+    <div *ngIf="sSource.length > 0">
+        <div class="itemInSearchDropdown" *ngFor="let oSourceData of oTypedSourceData" (mousedown)="fnSourceDataClick(oSourceData)">
+            {{oSourceData}}
+        </div>
+        <div *ngIf="oTypedSourceData.length === 0 && oSelectedSource === ''">No results found</div>
+    </div>
+</div>
+
+<div class="destinationInputDiv">
+    <input type="text" placeholder="Enter Destination" [(ngModel)]="'sDestination'" (ngModelChange)="fnSearchDestination()">
+    <div *ngIf="sDestination.length > 0">
+        <div class="itemInSearchDropdown" *ngFor="let oDestinationData of oTypedDestinationData" (mousedown)="fnDestinationDataClick(oDestinationData)">
+            {{oDestinationData}}
+        </div>
+        <div *ngIf="oTypedDestinationData.length === 0 && oSelectedDestination === ''">No results found</div>
+    </div>
+</div>
+
+<input class="DepartDateInput" type="date" placeholder="Departure Date" [attr.min]="minDate">
+<input *ngIf="bTwoWayTrip" class="ReturnDateInput" type="date" placeholder="Return Date">
+<input class="PassengersInput" type="number" max="6" placeholder="Passengers (Upto 6)">
+<div class="searchFlightBtn" (click)="fnSearchFlightBtnClick()" >Search</div>

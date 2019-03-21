@@ -1,0 +1,22 @@
+<div class="searchResultContainer" [ngSwitch]="eSearchResultsState">
+  <div *ngSwitchCase="SearchResultsState.Loading">
+    please wait loading...
+  </div>
+  <div *ngSwitchCase="SearchResultsState.NoResult">
+    Oops... No result found
+  </div>
+  <div *ngSwitchCase="SearchResultsState.ValidResult">
+    <div class="searchResultHeader">
+      {{sSourceTitle}} &lt;------&gt; {{sDestinationTitle}}
+    </div>
+    <div class="searchResultBody">
+      <app-flight-item *ngIf="returnFlightArr.length === 0; else twowayItem" [flightArr]="onwardFlightArr"></app-flight-item>
+      <ng-template #twowayItem>
+        <app-flight-twoway-item [onwardFlightArr]="onwardFlightArr" [returnFlightArr]="returnFlightArr"></app-flight-twoway-item>
+      </ng-template>
+    </div>
+  </div>
+  <div *ngSwitchDefault>
+    Please search
+  </div>
+</div>

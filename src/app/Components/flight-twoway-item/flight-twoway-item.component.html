@@ -1,0 +1,7 @@
+<div *ngFor="let onwardFlight of onwardFlightArr">
+  <div class="searchResultItem" *ngFor="let returnFlight of returnFlightArr">
+    <app-flight-data [oFlight]="onwardFlight"></app-flight-data>
+    <app-flight-data [oFlight]="returnFlight"></app-flight-data>
+    <div class="flBookTicketBtn" (click)="FnBookTicketClick(flight)">Fly for Rs {{onwardFlight.Price + returnFlight.Price}}</div>
+  </div>
+</div>
